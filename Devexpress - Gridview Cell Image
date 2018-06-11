@@ -1,0 +1,10 @@
+ Dim view As GridView = TryCast(sender, GridView)
+            If e.Column.FieldName = "ADREMAIL1" Then
+                Dim cellInfo As GridCellInfo = TryCast(e.Cell, GridCellInfo)
+                Dim info As TextEditViewInfo = TryCast(cellInfo.ViewInfo, TextEditViewInfo)
+                If info IsNot Nothing Then
+                    info.ContextImage = My.Resources.hareketler16 'GetImageByRowHandle(e.RowHandle)
+
+                    info.CalcViewInfo()
+                End If
+            End If
